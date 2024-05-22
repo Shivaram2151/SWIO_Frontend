@@ -14,11 +14,11 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         {/* <Route path="/checkout/:sessionId" element={<CheckoutPage />} /> */}
         <Route
-          path="https://swio-frontend-beta.vercel.app/success"
+          path="/success"
           element={<Transaction />}
         />
         <Route
-          path="https://swio-frontend-beta.vercel.app/Error"
+          path="s/Error"
           element={<NotFound />}
         />
       </Routes>
