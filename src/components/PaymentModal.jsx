@@ -7,7 +7,6 @@ function PaymentModal({ onClose }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("cgeck name", name);
     const requestBody = JSON.stringify({
       name: name,
       amount: parseInt(amount, 10) * 100,
