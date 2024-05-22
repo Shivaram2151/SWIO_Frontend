@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../LandingPage/LandingPage.css";
 import PaymentModal from "../PaymentModal"; // Changed import name
 import Modal from "react-modal"; // Added Modal import
@@ -13,6 +13,51 @@ const LandingPage = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
+  useEffect(() => {
+    // Function to add 'sticky' class when element with specified ID enters viewport
+    const stickDivOnId = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              element.classList.add("sticky");
+            } else {
+              element.classList.remove("sticky");
+            }
+          });
+        });
+        observer.observe(element);
+      }
+    };
+
+    // Call the function to add sticky behavior to "opensticky"
+    stickDivOnId("opensticky");
+
+    // Function to remove 'sticky' class when element with specified ID leaves viewport
+    const unstickDivOnId = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              element.classList.remove("sticky");
+            }
+          });
+        });
+        observer.observe(element);
+      }
+    };
+
+    // Call the function to remove sticky behavior from "closesticky"
+    stickDivOnId("closesticky");
+
+    // Clean up observers when component unmounts
+    return () => {
+      unstickDivOnId("opensticky");
+      unstickDivOnId("closesticky");
+    };
+  }, []); // Empty dependency array to run effect only once after initial render
 
   return (
     <>
@@ -175,6 +220,133 @@ const LandingPage = () => {
           find the perfect fit for your career.
         </p>
       </div>
+      <div className="flex h-96 " id="opensticky">
+        <div className="w-1/2">{/* Content for the first div */}</div>
+        <div className="w-1/2 h-18 ">
+          <div className="parallax "></div>
+        </div>
+      </div>
+      <div className="flex h-96 mb-10" id="closesticky"></div>
+      <div className="flex h-96 mb-28">
+        <div className="w-1/2 " style={{ zIndex: 1 }}>
+          <p className="font-bold p-18 pl-12 text-3xl pb-10">
+            Job Search Simplified
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Effortlessly find your dream job or discover new career
+            opportunities.
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Use advanced filters to narrow down job listings that match your
+            skills, experience, and preferences.
+          </p>
+        </div>
+        <div
+          className="w-1/2 text-center mx-auto flex flex-col justify-center items-center m-10 mr-3 mb-32"
+          style={{ zIndex: 1 }}
+        >
+          <img
+            src="public\images\sizebar.png"
+            alt=""
+            className="h-32 w-72 mb-4 max-w-full max-h-full"
+          />
+          <img src="public\images\bar2.jpg" alt="" className="h-32 w-72 mb-4" />
+          <img src="public\images\bar3.jpg" alt="" className="h-32 w-72" />
+        </div>
+      </div>
+      <div className="flex h-96 mb-48 " id="closesticky">
+        <div className="w-1/2 " style={{ zIndex: 1 }}>
+          <p className="font-bold p-18 pl-12 text-3xl pb-10">
+            Typography Customization
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Fine-tune the way you present your job listings and candidate
+            profiles with our advanced typography settings.
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Showcase the essential information with clarity and style.
+          </p>
+        </div>
+        <div
+          className="w-1/2 text-center mx-auto flex flex-col justify-center items-center m-10 mr-3 mb-8"
+          style={{ zIndex: 1 }}
+        >
+          <img
+            src="public\images\scrollImage.jpg"
+            alt=""
+            className="h-52 w-72 mb-4 max-w-full max-h-full mt-10"
+          />
+          <img
+            src="public\images\scroll2.jpg"
+            alt=""
+            className="h-52 w-72 mb-4"
+          />
+        </div>
+      </div>
+      <div className="flex h-96 mb-28 pb-20" id="closesticky">
+        <div className="w-1/2 " style={{ zIndex: 1 }}>
+          <p className="font-bold p-18 pl-12 text-3xl pb-10">
+            Interface Customization
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Tailor the user experience to your specific needs with our flexible
+            interface customization options.
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Adjust the layout, alignment, and position to perfectly fit your
+            setup, and control the visibility of various elements to streamline
+            the interface.
+          </p>
+        </div>
+        <div
+          className="w-1/2 text-center mx-auto flex flex-col justify-center items-center m-10 mr-3 "
+          style={{ zIndex: 1 }}
+        >
+          <img
+            src="public\images\Interface1.jpg"
+            alt=""
+            className="h-52 w-72 mb-4 max-w-full max-h-full mt-10"
+          />
+          <img
+            src="public\images\Interface2.jpg"
+            alt=""
+            className="h-52 w-72 mb-4"
+          />
+        </div>
+      </div>
+      <div className="flex h-96 mb-28 pb-20 mt-12" id="closesticky">
+        <div className="w-1/2 " style={{ zIndex: 1 }}>
+          <p className="font-bold p-18 pl-12 text-3xl pb-10">
+            Settings Customization
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Optimize the user interface to suit your workflow with versatile
+            settings options.
+          </p>
+          <p className="font-sans p-18 pl-12 text-2xl pb-10 text-left w-3/4">
+            Manage icon display, customize keyboard shortcuts, and integrate
+            seamlessly with your favorite applications.
+          </p>
+        </div>
+        <div
+          className="w-1/2 text-center mx-auto flex flex-col justify-center items-center m-10 mr-3 mb-8 mt-32"
+          style={{ zIndex: 1 }}
+        >
+          <img
+            src="public\images\Settings2.jpg"
+            alt=""
+            className="h-52 w-72 mb-4"
+          />
+          <img
+            src="public\images\Settings3.jpg"
+            alt=""
+            className="h-52 w-72 mb-4"
+          />
+        </div>
+      </div>
+      <div className="text-red-500 text-center">INTEGRATIONS</div>
+      <div className="text-3xl font-bold text-center">Like, Scrobble.</div>
+
       <Modal isOpen={isModalOpen} onRequestClose={handleCloseModal}>
         <PaymentModal onClose={handleCloseModal} />
       </Modal>
