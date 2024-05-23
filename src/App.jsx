@@ -22,6 +22,7 @@ function App() {
           element={<NotFound />}
         />
         <Route path="/success" element={<Transaction />} />
+        <Route path="/Error" element={<NotFound />} />
       </Routes>
       {/* <LandingPage /> */}
     </>
