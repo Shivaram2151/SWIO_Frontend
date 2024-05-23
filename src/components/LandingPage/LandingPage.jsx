@@ -102,7 +102,7 @@ const LandingPage = () => {
         </button>
       </div>
       <div className="m-10 text-center text-blue-600">
-        NEW IN{" "}
+        NEW IN
         <span className="rounded p-1 bg-blue-300 text-black "> 2.0 </span>
       </div>
       <div className="text-center m-3 font-bold text-xl md:text-2xl lg:text-3xl">
@@ -116,7 +116,7 @@ const LandingPage = () => {
       <div className="bg-blue-500 min-h-80 bg-rgb(34, 34, 34) rounded m-16 flex justify-evenly overflow-hidden">
         <div className="h-48 mt-14 -ml-52 mr-9 w-2/6 flex bg-white/10 backdrop-blur-sm p-1 rounded-xl shadow-md inline-block ">
           <img
-            src="public/images/job2.jpg"
+            src="/images/job2.jpg"
             alt="Placeholder image"
             className="rounded-lg ml-9 m-1"
           />
@@ -124,7 +124,7 @@ const LandingPage = () => {
         <div className="h-44 mt-14 w-2/6 flex bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-md inline-block">
           <div className="w-1/3 mr-6 h-full">
             <img
-              src="public/images/job1.jpg"
+              src="/images/job1.jpg"
               alt="Placeholder image"
               className="rounded-lg object-fill mt-8"
             />
@@ -142,14 +142,14 @@ const LandingPage = () => {
         </div>
         <div className="h-5/8 mt-10 mb-10 ml-11 mr-9 w-56 flex bg-white/10 backdrop-blur-sm p-1 rounded-xl shadow-md inline-block ">
           <img
-            src="public/images/job3.jpg"
+            src="/images/job3.jpg"
             alt="Placeholder image"
             className="rounded-lg m-1 object-center"
           />
         </div>
         <div className="h-5/8 mt-10 mb-10 ml-11 mr-9 w-56 flex bg-white/10 backdrop-blur-sm p-1 rounded-xl shadow-md inline-block ">
           <img
-            src="public/images/job4.jpg"
+            src="/images/job4.jpg"
             alt="Placeholder image"
             className="rounded-lg m-1 object-center"
           />
@@ -169,7 +169,7 @@ const LandingPage = () => {
             </div>
           </div>
           <img
-            src="public/images/job6.jpg"
+            src="/images/job6.jpg"
             alt="Placeholder image"
             className="rounded-lg m-1 w-3/6 mr-5"
           />
@@ -178,7 +178,7 @@ const LandingPage = () => {
         <div className="h-44 w-1/2 m-7 h-72 flex bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-md inline-block">
           <div className="w-1/3 mr-6 h-full">
             <img
-              src="public/images/job5.jpg"
+              src="/images/job5.jpg"
               alt="Job portal themes image"
               className="rounded-lg h-full w-full object-cover"
             />
@@ -246,12 +246,12 @@ const LandingPage = () => {
           style={{ zIndex: 1 }}
         >
           <img
-            src="public\images\sizebar.png"
+            src="\images\sizebar.png"
             alt=""
             className="h-32 w-72 mb-4 max-w-full max-h-full"
           />
-          <img src="public\images\bar2.jpg" alt="" className="h-32 w-72 mb-4" />
-          <img src="public\images\bar3.jpg" alt="" className="h-32 w-72" />
+          <img src="\images\bar2.jpg" alt="" className="h-32 w-72 mb-4" />
+          <img src="\images\bar3.jpg" alt="" className="h-32 w-72" />
         </div>
       </div>
       <div className="flex h-96 mb-48 " id="closesticky">
@@ -272,15 +272,11 @@ const LandingPage = () => {
           style={{ zIndex: 1 }}
         >
           <img
-            src="public\images\scrollImage.jpg"
+            src="\images\scrollImage.jpg"
             alt=""
             className="h-52 w-72 mb-4 max-w-full max-h-full mt-10"
           />
-          <img
-            src="public\images\scroll2.jpg"
-            alt=""
-            className="h-52 w-72 mb-4"
-          />
+          <img src="\images\scroll2.jpg" alt="" className="h-52 w-72 mb-4" />
         </div>
       </div>
       <div className="flex h-96 mb-28 pb-20" id="closesticky">
@@ -303,15 +299,11 @@ const LandingPage = () => {
           style={{ zIndex: 1 }}
         >
           <img
-            src="public\images\Interface1.jpg"
+            src="\images\Interface1.jpg"
             alt=""
             className="h-52 w-72 mb-4 max-w-full max-h-full mt-10"
           />
-          <img
-            src="public\images\Interface2.jpg"
-            alt=""
-            className="h-52 w-72 mb-4"
-          />
+          <img src="\images\Interface2.jpg" alt="" className="h-52 w-72 mb-4" />
         </div>
       </div>
       <div className="flex h-96 mb-28 pb-20 mt-12" id="closesticky">
@@ -332,16 +324,8 @@ const LandingPage = () => {
           className="w-1/2 text-center mx-auto flex flex-col justify-center items-center m-10 mr-3 mb-8 mt-32"
           style={{ zIndex: 1 }}
         >
-          <img
-            src="public\images\Settings2.jpg"
-            alt=""
-            className="h-52 w-72 mb-4"
-          />
-          <img
-            src="public\images\Settings3.jpg"
-            alt=""
-            className="h-52 w-72 mb-4"
-          />
+          <img src="\images\Settings2.jpg" alt="" className="h-52 w-72 mb-4" />
+          <img src="\images\Settings3.jpg" alt="" className="h-52 w-72 mb-4" />
         </div>
       </div>
       <div className="text-red-500 text-center">INTEGRATIONS</div>

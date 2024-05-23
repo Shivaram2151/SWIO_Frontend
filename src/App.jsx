@@ -21,6 +21,7 @@ function App() {
           path="https://swio-frontend-beta.vercel.app/Error"
           element={<NotFound />}
         />
+        <Route path="/success" element={<Transaction />} />
       </Routes>
       {/* <LandingPage /> */}
     </>
